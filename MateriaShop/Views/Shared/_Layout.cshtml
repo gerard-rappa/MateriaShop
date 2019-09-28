@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Materia Shop</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <style>
+        .bg-color {
+            background-color: rgba(0, 0, 255, 0.60);
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url('/Resources/materia.jpg');
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .badge-Magic {
+            background-color: forestgreen;
+        }
+
+        .badge-Command {
+            background-color: #ffd700;
+        }
+
+        .badge-Support {
+            background-color: #0000ff;
+        }
+
+        .badge-Summon {
+            background-color: #ff0000;
+        }
+
+        .badge-Independent {
+            background-color: #ce00ff
+        }
+
+        .border-Magic {
+            border-color: forestgreen !important;
+        }
+
+        .border-Summon {
+            border-color: #ff0000 !important;
+        }
+
+        .border-Command {
+            border-color: #ffd700 !important;
+        }
+
+        .border-Support {
+            border-color: #0000ff !important;
+        }
+
+        .border-Independent {
+            border-color: #ce00ff !important;
+        }
+
+        .btn-Command {
+            background-color: rgba(255, 215, 0, 0.60);
+            color: floralwhite;
+        }
+
+        .btn-Magic {
+            background-color: rgba(49, 255, 0, 0.60);
+            color: floralwhite;
+        }
+
+        .btn-Summon {
+            background-color: rgba(255, 0, 0, 0.60);
+            color: floralwhite;
+        }
+
+        .btn-Independent {
+            background-color: rgba(206, 0, 255, 0.60);
+            color: floralwhite;
+        }
+
+        .btn-Support {
+            background-color: rgba(0, 0, 255, 0.60);
+            color: floralwhite;
+        }
+
+        .table-transparent {
+            background-color: rgba(96, 189, 200, 0.85)
+        }
+    </style>
+
+</head>
+<body class="bg-image">    
+    <div class="navbar navbar-dark bg-color" role="navigation">
+        <div class="row">
+            <a class="col navbar-brand" href="#">Materia Shop</a>
+        </div>
+            <div class="col-4 text-right">
+                @await Component.InvokeAsync("CartSummary")
+            </div>        
+    </div>  
+        <div class="row m-1 p-1">
+            <div id="categories" class="col-3">
+                @await Component.InvokeAsync("NavigationMenu")
+            </div>
+            <div class=" col-9">
+                @RenderBody()
+            </div>   
+    </div>   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "fontawesome@4.7.0",
+      "destination": "wwwroot/lib/fontawesome/"
+    }
+  ]
+}
